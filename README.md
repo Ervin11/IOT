@@ -4,8 +4,8 @@
 * Clone to `your-project-dir` and enter it
 
     ```
-    git clone https://gitlab.com/catie_6tron/mbed-os-app-template.git YOUR_PROJECT_NAME
-    cd YOUR_PROJECT_NAME
+    git clone https://gitlab.com/catie_6tron/mbed-os-app-template.git YOUR_PROJECT_DIR
+    cd YOUR_PROJECT_DIR
     ```
 
 * Create the mbed config file, otherwise Mbed CLI commands won't work:
@@ -29,6 +29,20 @@
 
     ```
     mbed export -i eclipse_6tron
+    ```
+
+## Compiling and programming without IDE
+
+* Compile the project:
+
+    ```
+    mbed compile
+    ```
+
+* Program the target device with a J-Link debug probe, eg.:
+
+    ```
+    ./dist/program.py STM32L496RG BUILD/ZEST_CORE_STM32L496RG/GCC_ARM/your-project-name.elf
     ```
 
 ## Manage and save your project with Git:
