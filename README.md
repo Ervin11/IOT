@@ -54,6 +54,6 @@ _Note: To clone **and** deploy the project use `mbed import https://gitlab.com/c
 * Modify remote URL to indicate your project URL with:
 
     ```sh
-    $ git remote set-url origin git@gitlab.com:catie_sixtron/your-project-name.git'
+    $ git remote set-url origin YOUR-PROJECT-URL
     $ git push -u origin master
     ```
