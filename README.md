@@ -1,6 +1,9 @@
 # Embedded application template
 
 ## Usage
+
+_Note: To clone **and** deploy the project use `mbed import https://gitlab.com/catie_6tron/mbed-os-app-template.git your-project-dir` and go directly to the target and toolchain definition._
+
 * Clone to `your-project-dir` and enter it
 
     ```
