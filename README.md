@@ -15,58 +15,58 @@ Alternatively:
 
 * Clone to `YOUR_PROJECT_NAME` and enter it:
 
-  ```sh
-  git clone https://gitlab.com/catie_6tron/mbed-os-app-template.git YOUR_PROJECT_NAME
-  cd YOUR_PROJECT_NAME
-  ```
+    ```sh
+    git clone https://gitlab.com/catie_6tron/mbed-os-app-template.git YOUR_PROJECT_NAME
+    cd YOUR_PROJECT_NAME
+    ```
 
 * Create an empty Mbed configuration file, otherwise Mbed CLI commands won't work:
 
-  ```sh
-  # On Linux/macOS
-  touch .mbed on Linux/macOS
-  ```
+    ```sh
+    # On Linux/macOS
+    touch .mbed on Linux/macOS
+    ```
 
-  Or:
+    Or:
 
-  ```cmd
-  REM On Windows
-  echo.> .mbed
-  ```
+    ```cmd
+    REM On Windows
+    echo.> .mbed
+    ```
 
 * Deploy Mbed OS with:
 
-  ```sh
-  mbed deploy
-  ```
+    ```sh
+    mbed deploy
+    ```
 
 * Define your target (eg. `ZEST_CORE_STM32L496RG`) and toolchain:
 
-  ```sh
-  mbed target ZEST_CORE_STM32L496RG
-  mbed toolchain GCC_ARM
-  ```
+    ```sh
+    mbed target ZEST_CORE_STM32L496RG
+    mbed toolchain GCC_ARM
+    ```
 
 * Export to Eclipse IDE with:
 
-  ```sh
-  mbed export -i eclipse_6tron
-  ```
+    ```sh
+    mbed export -i eclipse_6tron
+    ```
 
 ## Compiling and programming without IDE
 
 * Compile the project:
 
-  ```sh
-  mbed compile
-  ```
+    ```sh
+    mbed compile
+    ```
 
 * Program the target device (eg. `STM32L496RG` for the Zest_Core_STM32L496RG) with a
   J-Link debug probe:
 
-  ```sh
-  python dist/program.py STM32L496RG BUILD/ZEST_CORE_STM32L496RG/GCC_ARM/YOUR_PROJECT_NAME.elf
-  ```
+    ```sh
+    python dist/program.py STM32L496RG BUILD/ZEST_CORE_STM32L496RG/GCC_ARM/YOUR_PROJECT_NAME.elf
+    ```
 
 ## Manage and save your project with Git
 
@@ -74,7 +74,7 @@ Alternatively:
 
 * Modify remote URL to point to your repository and push the application template:
 
-  ```sh
-  git remote set-url origin YOUR_REPOSITORY_URL
-  git push -u origin master
-  ```
+    ```sh
+    git remote set-url origin YOUR_REPOSITORY_URL
+    git push -u origin master
+    ```
