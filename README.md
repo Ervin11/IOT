@@ -22,15 +22,15 @@ Alternatively:
 
 * Create an empty Mbed configuration file, otherwise Mbed CLI commands won't work:
 
+    On Linux/macOS:
+
     ```sh
-    # On Linux/macOS
     touch .mbed on Linux/macOS
     ```
 
-    Or:
+    Or on Windows:
 
-    ```cmd
-    REM On Windows
+    ```sh
     echo.> .mbed
     ```
 
