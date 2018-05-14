@@ -6,35 +6,50 @@ None
 
 ## Usage
 
-_Note: To clone **and** deploy the project use `mbed import https://gitlab.com/catie_6tron/mbed-os-app-template.git your-project-dir` and go directly to the target and toolchain definition._
+To clone **and** deploy the project in one command, use `mbed import` and skip to
+the target and toolchain definition:
 
-* Clone to `your-project-dir` and enter it
+    mbed import https://gitlab.com/catie_6tron/mbed-os-app-template.git YOUR_PROJECT_NAME
 
+Alternatively:
+
+* Clone to `YOUR_PROJECT_NAME` and enter it:
+
+    ```sh
+    git clone https://gitlab.com/catie_6tron/mbed-os-app-template.git YOUR_PROJECT_NAME
+    cd YOUR_PROJECT_NAME
     ```
-    git clone https://gitlab.com/catie_6tron/mbed-os-app-template.git YOUR_PROJECT_DIR
-    cd YOUR_PROJECT_DIR
+
+* Create an empty Mbed configuration file, otherwise Mbed CLI commands won't work:
+
+    On Linux/macOS:
+
+    ```sh
+    touch .mbed on Linux/macOS
     ```
 
-* Create the mbed config file, otherwise Mbed CLI commands won't work:
+    Or on Windows:
 
-    `touch .mbed` on Linux/macOS or `echo.> .mbed` on Windows
+    ```sh
+    echo.> .mbed
+    ```
 
 * Deploy Mbed OS with:
 
-    ```
+    ```sh
     mbed deploy
     ```
 
-* Define your target and toolchain:
+* Define your target (eg. `ZEST_CORE_STM32L496RG`) and toolchain:
 
-    ```
+    ```sh
     mbed target ZEST_CORE_STM32L496RG
     mbed toolchain GCC_ARM
     ```
 
 * Export to Eclipse IDE with:
 
-    ```
+    ```sh
     mbed export -i eclipse_6tron
     ```
 
@@ -42,22 +57,24 @@ _Note: To clone **and** deploy the project use `mbed import https://gitlab.com/c
 
 * Compile the project:
 
-    ```
+    ```sh
     mbed compile
     ```
 
-* Program the target device with a J-Link debug probe, eg.:
-
-    ```
-    ./dist/program.py STM32L496RG BUILD/ZEST_CORE_STM32L496RG/GCC_ARM/your-project-name.elf
-    ```
-
-## Manage and save your project with Git:
-
-* Edit readme file
-* Modify remote URL to indicate your project URL with:
+* Program the target device (eg. `STM32L496RG` for the Zest_Core_STM32L496RG) with a
+  J-Link debug probe:
 
     ```sh
-    $ git remote set-url origin YOUR-REPOSITORY-URL
-    $ git push -u origin master
+    python dist/program.py STM32L496RG BUILD/ZEST_CORE_STM32L496RG/GCC_ARM/YOUR_PROJECT_NAME.elf
+    ```
+
+## Manage and save your project with Git
+
+* Edit `README.md` file
+
+* Modify remote URL to point to your repository and push the application template:
+
+    ```sh
+    git remote set-url origin YOUR_REPOSITORY_URL
+    git push -u origin master
     ```
